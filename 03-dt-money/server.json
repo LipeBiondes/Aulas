@@ -23,6 +23,38 @@
       "category": "Alimentação",
       "price": 120,
       "createdAt": "2023-06-08T18:35:18.809Z"
+    },
+    {
+      "category": "Alimentação",
+      "description": "Pica",
+      "price": 12,
+      "type": "income",
+      "createdAt": "2023-06-23T18:44:04.028Z",
+      "id": "3eUmFdt"
+    },
+    {
+      "category": "Pica",
+      "description": "Andar de Skate",
+      "price": 12000,
+      "type": "outcome",
+      "createdAt": "2023-06-23T18:48:04.959Z",
+      "id": "3Jv2wBf"
+    },
+    {
+      "category": "a",
+      "description": "pica",
+      "price": 120,
+      "type": "income",
+      "createdAt": "2023-06-23T18:51:17.951Z",
+      "id": "i7nQe_l"
+    },
+    {
+      "category": "Trabalho",
+      "description": "Dar a bunda",
+      "price": 1200,
+      "type": "income",
+      "createdAt": "2023-06-23T19:04:51.907Z",
+      "id": "lzjn8GN"
     }
   ]
 }
