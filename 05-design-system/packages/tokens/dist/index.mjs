@@ -1,19 +1,19 @@
 // src/colors.ts
 var colors = {
-  white: "#ffffff",
+  white: "#FFFFFF",
   black: "#000000",
-  gray100: "#e1e1e6",
-  gray200: "#a9a9b2",
-  gray400: "#7c7c8a",
+  gray100: "#E1E1E6",
+  gray200: "#A9A9B2",
+  gray400: "#7C7C8A",
   gray500: "#505059",
   gray600: "#323238",
-  gray700: "#29292e",
+  gray700: "#29292E",
   gray800: "#202024",
   gray900: "#121214",
-  ignite300: "#00b37e",
-  ignite500: "#00875f",
-  ignite700: "#015f43",
-  ignite900: "#00291d"
+  ignite300: "#00B37E",
+  ignite500: "#00875F",
+  ignite700: "#015F43",
+  ignite900: "#00291D"
 };
 
 // src/font-sizes.ts
