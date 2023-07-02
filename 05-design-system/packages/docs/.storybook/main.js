@@ -16,6 +16,12 @@ const config = {
   },
   docs: {
     autodocs: 'tag'
+  },
+  viteFinal: async (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/05-Design-System/'
+    }
+    return config
   }
 }
 export default config
