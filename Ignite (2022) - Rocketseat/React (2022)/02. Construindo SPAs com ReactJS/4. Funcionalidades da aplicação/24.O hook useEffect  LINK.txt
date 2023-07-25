@@ -1,0 +1,7 @@
+Descrição
+
+Nessa aula, vamos conhecer um dos hooks do ReactJS, que é o hook useEffect.
+
+Veremos como sua utilização ajuda a gente a controlar efeitos colaterais da renderização do nosso componente.
+
+about:blank#blocked

@@ -1,0 +1,10 @@
+Descrição
+
+React Hook Form
+
+https://react-hook-form.com/
+
+Descrição
+Para adicionar funcionalidade ao nosso formulário, nós vamos utilizar uma das principais bibliotecas de formulários para o react, a react-hook-form.
+
+Vamos ver como utilizar o hook que a biblioteca provém para que consigamos recuperar os dados dos nossos input ao submit do formulário.
