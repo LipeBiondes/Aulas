@@ -1,13 +1,21 @@
 import { Button, Heading, MultiStep, Text } from '@ignite-ui/react'
 import { Container, Header } from '../styles'
-import { ArrowRight } from 'phosphor-react'
+import { ArrowRight, Check } from 'phosphor-react'
 // import { useRouter } from 'next/router'
-import { ConnectBox, ConnectItem } from './styles'
+import { AuthError, ConnectBox, ConnectItem } from './styles'
 import { signIn, useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 
 export default function Register() {
   const session = useSession()
-  // async function handleRegister() {}
+  const router = useRouter()
+
+  const hasAuthError = router.query.error
+  const isSignedIn = session.status === 'authenticated'
+
+  async function handleConnectGoogleCalendar() {
+    signIn('google')
+  }
 
   return (
     <Container>
@@ -23,19 +31,29 @@ export default function Register() {
       <ConnectBox>
         <ConnectItem>
           <Text>Google Calendar</Text>
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={() => {
-              signIn('google')
-            }}
-          >
-            Conectar
-            <ArrowRight />
-          </Button>
+          {isSignedIn ? (
+            <Button size="sm" disabled>
+              Conectado
+              <Check />
+            </Button>
+          ) : (
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={handleConnectGoogleCalendar}
+            >
+              Conectar
+              <ArrowRight />
+            </Button>
+          )}
         </ConnectItem>
-        <Text>{JSON.stringify(session.data)}</Text>
-        <Button type="submit">
+        {hasAuthError && (
+          <AuthError size="sm">
+            Falha ao conectar com o Google Calendar, verifique se você habilitou
+            as permissões de acesso.
+          </AuthError>
+        )}
+        <Button type="submit" disabled={!isSignedIn}>
           Proximo passo <ArrowRight />
         </Button>
       </ConnectBox>
